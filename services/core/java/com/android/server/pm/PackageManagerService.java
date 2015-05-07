@@ -1159,7 +1159,7 @@ public class PackageManagerService extends IPackageManager.Stub {
                                 boolean privacyGuard = Secure.getIntForUser(
                                         mContext.getContentResolver(),
                                         android.provider.Settings.Secure.PRIVACY_GUARD_DEFAULT,
-                                        0, UserHandle.USER_CURRENT) == 1;
+                                        1, UserHandle.USER_CURRENT) == 1;
                                 if (privacyGuard) {
                                     mAppOps.setPrivacyGuardSettingForPackage(
                                             res.pkg.applicationInfo.uid,
