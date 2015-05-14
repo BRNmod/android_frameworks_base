@@ -2615,6 +2615,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             loadIntegerSetting(stmt, Settings.System.STATUS_BAR_BATTERY_STYLE,
                     R.integer.def_battery_style);
 
+            loadIntegerSetting(stmt, Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
+                    R.integer.def_show_battery_percent);
+
             loadIntegerSetting(stmt, Settings.System.ENABLE_FORWARD_LOOKUP,
                     R.integer.def_forward_lookup);
 
@@ -2788,6 +2791,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             loadBooleanSetting(stmt, Settings.Secure.STATS_COLLECTION,
                     R.bool.def_cm_stats_collection);
 
+            loadBooleanSetting(stmt, Settings.Secure.PRIVACY_GUARD_DEFAULT,
+                    R.bool.def_privacy_guard_default);
+
+            loadBooleanSetting(stmt, Settings.Secure.ADVANCED_REBOOT,
+                    R.bool.def_advanced_reboot);
+
             loadBooleanSetting(stmt, Settings.Secure.ADVANCED_MODE,
                     com.android.internal.R.bool.config_advancedSettingsMode);
 
@@ -2959,6 +2968,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             loadSetting(stmt, Settings.Global.SET_INSTALL_LOCATION, 0);
             loadSetting(stmt, Settings.Global.DEFAULT_INSTALL_LOCATION,
                     PackageHelper.APP_INSTALL_AUTO);
+
+            loadSetting(stmt, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED,
+                    R.integer.def_dock_audio_media_enabled);
 
             // Set default cdma emergency tone
             loadSetting(stmt, Settings.Global.EMERGENCY_TONE, 0);

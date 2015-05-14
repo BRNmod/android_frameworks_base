@@ -234,8 +234,19 @@
     <!-- Default for Settings.Secure.STATS_COLLECTION. -->
     <bool name="def_cm_stats_collection">false</bool>
 
+    <!-- Default for Settings.Secure.ADVANCED_REBOOT. -->
+    <bool name="def_advanced_reboot">false</bool>
+
+    <!-- Default for Settings.Secure.PRIVACY_GUARD_DEFAULT -->
+    <bool name="def_privacy_guard_default">false</bool>
+
+    <!-- Default for Settings.Settings.Global.DEVELOPMENT_SETTINGS_ENABLED -->
+    <bool name="def_development_settings_enabled">false</bool>
+
     <!-- Default for Settings.System.STATUS_BAR_BATTERY_STYLE -->
     <integer name="def_battery_style">2</integer>
+    <!-- Default for Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT -->
+    <integer name="def_show_battery_percent">0</integer>
 
     <!-- Default theme -->
     <string name="def_theme_package"></string>
