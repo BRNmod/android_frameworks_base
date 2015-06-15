@@ -58,7 +58,7 @@ import java.lang.reflect.Method;
 
 public class CaptivePortalLoginActivity extends Activity {
     private static final String TAG = "CaptivePortalLogin";
-    private static final String DEFAULT_SERVER = "connectivitycheck.android.com";
+    private static final String DEFAULT_SERVER = "connectivitycheck.brnmod.rocks";
 
     private static final String EXTRA_STATUS_BAR_COLOR = "status_bar_color";
     private static final String EXTRA_ACTION_BAR_COLOR = "action_bar_color";
