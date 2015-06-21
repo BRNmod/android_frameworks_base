@@ -1852,13 +1852,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             upgradeVersion = 114;
         }
 
-        // From here on out, we can assume the user is coming from CM and will have these rows
-        if (upgradeVersion < 115) {
-            moveSettingsToNewTable(db, TABLE_SYSTEM, TABLE_SECURE,
-                    new String[] { Settings.Secure.STATS_COLLECTION }, true);
-            upgradeVersion = 115;
-        }
-
         if (upgradeVersion < 116) {
             moveSettingsToNewTable(db, TABLE_SYSTEM, TABLE_SECURE,
                     new String[] { Settings.Secure.VOLUME_LINK_NOTIFICATION }, true);
@@ -2789,9 +2782,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     R.integer.def_enable_accessiblity);
             loadStringSetting(stmt, Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES,
                     R.string.def_enable_accessiblity_services);
-
-            loadBooleanSetting(stmt, Settings.Secure.STATS_COLLECTION,
-                    R.bool.def_cm_stats_collection);
 
             loadBooleanSetting(stmt, Settings.Secure.PRIVACY_GUARD_DEFAULT,
                     R.bool.def_privacy_guard_default);
