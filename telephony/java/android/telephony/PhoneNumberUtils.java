@@ -22,6 +22,7 @@ import com.android.i18n.phonenumbers.PhoneNumberUtil;
 import com.android.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
 import com.android.i18n.phonenumbers.Phonenumber.PhoneNumber;
 import com.android.i18n.phonenumbers.ShortNumberUtil;
+import com.android.internal.telephony.TelephonyProperties;
 
 import android.content.Context;
 import android.content.Intent;
@@ -2596,8 +2597,10 @@ public class PhoneNumberUtils
             } else {
                 RewriteRule rewriteRule =
                         getCdmaLocalRewriteRule(networkDialStr,
-                                SystemProperties.get(PROPERTY_OPERATOR_ISO_COUNTRY, ""),
-                                SystemProperties.get(PROPERTY_ICC_OPERATOR_ISO_COUNTRY, ""));
+                                SystemProperties.get(
+                                        TelephonyProperties.PROPERTY_OPERATOR_ISO_COUNTRY, ""),
+                                SystemProperties.get(
+                                        TelephonyProperties.PROPERTY_ICC_OPERATOR_ISO_COUNTRY, ""));
                 if (rewriteRule != null) {
                     retStr = rewriteRule.apply(networkDialStr);
                 } else {
