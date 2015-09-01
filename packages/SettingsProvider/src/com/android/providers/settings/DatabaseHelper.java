@@ -2701,9 +2701,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             loadBooleanSetting(stmt, Settings.Secure.ADVANCED_REBOOT,
                     R.bool.def_advanced_reboot);
 
-            loadBooleanSetting(stmt, Settings.Secure.ADVANCED_MODE,
-                    com.android.internal.R.bool.config_advancedSettingsMode);
-
             loadBooleanSetting(stmt, Settings.Secure.SPELL_CHECKER_ENABLED,
                     R.bool.def_spell_checker);
 
