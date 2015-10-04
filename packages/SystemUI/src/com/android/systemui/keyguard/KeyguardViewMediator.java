@@ -1624,11 +1624,6 @@ public class KeyguardViewMediator extends SystemUI {
         }
 
         if (authenticated) {
-            if (isFingerprintActive()) {
-                KeyguardStats.sendUnlockEvent(mContext,
-                        mUpdateMonitor.isFingerprintRecognized(),
-                        mUpdateMonitor.getFailedFingerprintUnlockAttempts());
-            }
             mUpdateMonitor.clearFailedUnlockAttempts(true /* Clear FingerprintAttempts */);
         }
         mUpdateMonitor.clearFingerprintRecognized();
